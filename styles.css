@@ -1,0 +1,157 @@
+/*Colores para la pagina:
+#F9FBE7
+#F0EDD4
+#ECCDB4
+#FEA1A1
+*/
+/*Fuente para todo el documento*/
+@font-face {
+    font-family: font_body;
+    src: url(fuentes/RobotoSlab-VariableFont_wght.ttf);
+    /* fuente para los titulos especiales */
+    font-family: font_titles;
+    src: url(fuentes/Pacifico-Regular.ttf);
+    /* fuente cursiva */
+    font-family: font_cursive;
+    src: url(fuentes/great-vibes.regular.ttf)
+}
+/* Background de la pagina web */
+body{
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255, 255, 255, 0.8)),
+    url(imagenes/Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+*{
+    font-family: font_body;
+    font-size: 30px;
+}
+/* fuente para todos los h3 */
+h3{
+    font-family: font_body;
+    color: #FEA1A1;
+    font-size: 30px;
+}
+p{
+    font-family: font_body;
+    font-size: 30px;
+}
+
+button {
+    background-color: #ECCDB4;
+    color: black;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Titulo Xv años */
+#titulo{
+    text-align: center;
+    padding: 350px;
+    margin: 0px;
+    border-bottom: black ;
+}
+/* poema */
+#poema{
+    background-color: #F9FBE7;
+    margin: 0px;
+    padding: 350px;
+    text-align: center;
+}
+
+.cont_papas_padrinos{
+    margin: 0px;
+    padding: 350px;
+    text-align: center;
+    margin: 0px;
+}
+
+/* estilos para el contenedor de la iglesia */
+.cont_parroquia {
+    padding: 350px;
+    background-color: #F9FBE7;
+    /* max-width: 1000px;
+    max-height: 1000px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .cont_imagen_parroquia {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  .cont_imagen_parroquia img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .cont_contenido_parroquia {
+    flex: 1;
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .cont_contenido_parroquia h3 {
+    color: #333;
+  }
+
+  .cont_contenido_parroquia h4 {
+    color: #555;
+  }
+
+  .cont_contenido_parroquia p {
+    color: #777;
+  }
+
+  .cont_contenido_parroquia a {
+    display: block;
+    margin-top: 10px;
+    color: blue;
+    text-decoration: none;
+  }
+
+/* estilos para imagen salon */
+.lugar_salon{
+    margin: 0px;
+    padding: 350px;
+    display: flex;
+    align-items: center;
+}
+
+#foto_salon{
+    margin: 0px;
+    width: 600px;
+    height: auto;
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* seccion foto alondra */
+.foto_alondra{
+    width: 100%;
+    background-color: #F9FBE7;
+    padding: 350px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.foto_alondra h2, .foto_alondra h1 {
+    margin-bottom: 10px;
+}
+
+.foto_alondra img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
