@@ -25,17 +25,18 @@ body{
     background-attachment: fixed;
 }
 *{
-    font-family: font_body;
+    font-family: font_cursive;
     font-size: 30px;
+    box-sizing: border-box; /*modificacion*/
 }
 /* fuente para todos los h3 */
 h3{
-    font-family: font_body;
+    font-family: font_cursive;
     color: #FEA1A1;
     font-size: 30px;
 }
 p{
-    font-family: font_body;
+    font-family: font_cursive;
     font-size: 30px;
 }
 
@@ -45,113 +46,135 @@ button {
     padding: 14px 20px;
     border: none;
     border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     cursor: pointer;
 }
 /* Titulo Xv años */
-#titulo{
-    text-align: center;
-    padding: 350px;
-    margin: 0px;
-    border-bottom: black ;
-}
-/* poema */
-#poema{
-    background-color: #F9FBE7;
-    margin: 0px;
-    padding: 350px;
-    text-align: center;
+.cont_mis_xv {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 330px;
+  margin-bottom: 330px;
 }
 
-.cont_papas_padrinos{
-    margin: 0px;
-    padding: 350px;
-    text-align: center;
-    margin: 0px;
+/* poema */
+.cont_poema {
+  background-color: #F9FBE7;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
+}
+/* padrinos */
+.cont_padrinos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 330px;
+  margin-bottom: 330px;
 }
 
 /* estilos para el contenedor de la iglesia */
-.cont_parroquia {
-    padding: 350px;
-    background-color: #F9FBE7;
-    /* max-width: 1000px;
-    max-height: 1000px; */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
+.cont_iglesia{
+  display: flex;
+  flex-direction: column;
+  background-color: #F9FBE7;
+  padding: 30px 0;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
+}
+#imagen_iglesia, #foto_salon{
+  height: auto;
+  max-width: 100%;
+  width: 600px;
+  margin: 30px 0;
+  border-radius: 20px;
+}
 
-  .cont_imagen_parroquia {
-    flex: 1;
-    margin: 0 auto;
-  }
-
-  .cont_imagen_parroquia img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-  }
-
-  .cont_contenido_parroquia {
-    flex: 1;
-    max-width: 600px;
-    text-align: center;
-  }
-
-  .cont_contenido_parroquia h3 {
-    color: #333;
-  }
-
-  .cont_contenido_parroquia h4 {
-    color: #555;
-  }
-
-  .cont_contenido_parroquia p {
-    color: #777;
-  }
-
-  .cont_contenido_parroquia a {
-    display: block;
-    margin-top: 10px;
-    color: blue;
-    text-decoration: none;
-  }
-
-/* estilos para imagen salon */
 .lugar_salon{
-    margin: 0px;
-    padding: 350px;
-    display: flex;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 330px 0;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
-#foto_salon{
-    margin: 0px;
-    width: 600px;
-    height: auto;
-    max-width: 100%;
-    height: auto;
-    margin-right: 20px;
+/* seccion foto alondra (hacer album de fotos deslizantes)*/
+.cont_alondra{
+  background-color: #F9FBE7;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
 }
 
-/* seccion foto alondra */
-.foto_alondra{
+#fotos_alondra{
+  height: auto;
+  max-width: 100%;
+  width: 350px;
+  margin: 30px 0;
+}
+
+/*carrucel de imagenes automatico*/
+.slider-box{
+  width: 600px;
+  height: auto;
+  border-radius: 20px;
+  margin: 50px auto 0;
+  overflow: hidden;
+}
+
+.slider-box ul{
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-box li{
+  width: 100%;
+  list-style: none;
+  position: relative;
+}
+
+.slider-box img{
+  width: 100%;
+  border-radius: 20px
+}
+
+@keyframes slide {
+  0% { margin-left: 0;}
+  20% { margin-left: 0;}
+
+  25% { margin-left: -100%;}
+  45% { margin-left: -100%;}
+
+  50% { margin-left: -200%;}
+  70% { margin-left: -200%;}
+
+  75% { margin-left: -300%;}
+  100% { margin-left: -300%;}
+}
+
+@media (max-width: 991px) {
+  body{
+    padding: 30px;
+  }
+
+  .slider-box{
     width: 100%;
-    background-color: #F9FBE7;
-    padding: 350px;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.foto_alondra h2, .foto_alondra h1 {
-    margin-bottom: 10px;
-}
-
-.foto_alondra img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    display: block;
-    margin: 0 auto 20px;
+  }
 }
